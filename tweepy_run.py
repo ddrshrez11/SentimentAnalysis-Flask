@@ -5,7 +5,11 @@ import webbrowser
 import time
 import re
 
-import config
+consumer_key = os.environ.get("consumer_key")
+consumer_secret = os.environ.get("AIRTABLE_KEY")
+access_token = os.environ.get("access_token")
+access_token_secret = os.environ.get("access_token_secret")
+callback_uri = os.environ.get("callback_uri")git 
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret, callback_uri)
