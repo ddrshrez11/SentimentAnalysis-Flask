@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+
+    <body>
+        <div class="row no-gutters d-md-flex align-items-md-center" id="home">
+            <div class="col" id="home_intro">
+                <div>
+                    <h1>Twitter</h1>
+                    <h2>Sentiment Analysis</h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 d-md-flex align-items-md-center" id="home_search">
+                <form class="d-flex flex-column" method="post" target="_blank">
+                    <div class="form-group" id="search_url"><label style="font-size: 35px;">URL</label><input class="form-control" type="url" required="" autofocus="" placeholder="Enter URL" name="url"></div><button class="btn btn-primary align-self-center" id="generate_btn" type="button">GENERATE</button></form>
+            </div>
+        </div>
+    
+{% endblock %}
+
