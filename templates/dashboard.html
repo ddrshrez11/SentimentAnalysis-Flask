@@ -1,94 +1,99 @@
+{% extends "base.html" %}
 
-<body style="background: linear-gradient(150deg, #1e2f5a 0%, #001c35 100%), #1b2636;">
-    <div id="wrapper">
-        <div id="sidebar-wrapper">
-            <form class="form-inline" id="side_search">
-                <div class="input-group input-group-sm" style="width: 100%;"><input class="form-control" type="text" style="background: #000000;border-radius: 5px 0px 0px 5px;border: 0;" inputmode="url" placeholder="Enter URL">
-                    <div class="input-group-append" id="srch_btn"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
-                </div>
-            </form>
-            <div id="profile"><img class="img-fluid" src="{{ url_for('static', filename='img/download.jpg') }}" width="150px">
-                <h4>Mr. John Doe</h4>
-                <h6>@johndoe</h6>
-                <div class="d-flex justify-content-center" id="profile_info"><span class="d-flex flex-column"><i class="fa fa-heart"></i>12</span><span class="d-flex flex-column"><i class="fa fa-retweet"></i>12</span><span class="d-flex flex-column"><i class="fa fa-comment"></i>345</span></div>
-            </div>
-            <ul class="sidebar-nav" style="margin-top: 30px;">
-                <li> <a href="#" style="text-align: center;/*color: #fff;*/text-transform: uppercase;font-family: 'Roboto';">Piechart</a></li>
-                <li> <a href="#" style="text-align: center;/*color: #fff;*/text-transform: uppercase;font-family: 'Roboto';">Bar Diagram</a></li>
-                <li> <a href="#" style="text-align: center;/*color: #fff;*/text-transform: uppercase;font-family: 'Roboto';">About Us</a></li>
-            </ul>
-        </div>
-        <div class="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row" id="nav">
-                    <div class="col"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a></div>
-                    <div class="col d-md-flex justify-content-md-end" id="dash_search">
-                        <form class="form-inline">
-                            <div class="input-group input-group-sm" style="width: 100%;"><input class="form-control" type="text" style="background: #000000;border-radius: 5px 0px 0px 5px;border: 0;" inputmode="url" placeholder="Enter URL">
-                                <div class="input-group-append" id="srch_btn-1"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
-                            </div>
-                        </form>
+{% block body %}
+
+    <body style="background: linear-gradient(150deg, #1e2f5a 0%, #001c35 100%), #1b2636;">
+        <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <form class="form-inline" id="side_search">
+                    <div class="input-group input-group-sm" style="width: 100%;"><input class="form-control" type="text" style="background: #000000;border-radius: 5px 0px 0px 5px;border: 0;" inputmode="url" placeholder="Enter URL">
+                        <div class="input-group-append" id="srch_btn"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
                     </div>
+                </form>
+                <div id="profile"><img class="img-fluid" src="{{ url_for('static', filename='img/download.jpg') }}" width="150px">
+                    <h4>Mr. John Doe</h4>
+                    <h6>@johndoe</h6>
+                    <div class="d-flex justify-content-center" id="profile_info"><span class="d-flex flex-column"><i class="fa fa-heart"></i>12</span><span class="d-flex flex-column"><i class="fa fa-retweet"></i>12</span><span class="d-flex flex-column"><i class="fa fa-comment"></i>345</span></div>
                 </div>
-                <div id="dashboard">
-                    <div class="row" id="dash_intro">
-                        <div class="col-md-12">
-                            <div class="d-flex align-items-center align-items-sm-center align-items-lg-center" id="tweet_date"><i class="fa fa-calendar d-sm-flex"></i>
-                                <h4>Tweeted on:&nbsp;<span id="date">2020-12-17</span></h4>
-                            </div>
-                            <div id="tweet_rep_num">
-                                <h3 style="margin: 10px 0 0 0;">Replies</h3>
-                                <h2 id="number" style="margin: 0;">345</h2>
-                            </div>
-                            <div id="tweet">
-                                <p>One advanced diverted domestic repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had sAD olicitude favourable own. Which could&nbsp;saw guest man now heard
-                                    but. Lasted Possible procured her trifling&nbsp;</p>
-                            </div>
+                <ul class="sidebar-nav" style="margin-top: 30px;">
+                    <li> <a href="#" style="text-align: center;/*color: #fff;*/text-transform: uppercase;font-family: 'Roboto';">Piechart</a></li>
+                    <li> <a href="#" style="text-align: center;/*color: #fff;*/text-transform: uppercase;font-family: 'Roboto';">Bar Diagram</a></li>
+                    <li> <a href="#" style="text-align: center;/*color: #fff;*/text-transform: uppercase;font-family: 'Roboto';">About Us</a></li>
+                </ul>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row" id="nav">
+                        <div class="col"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a></div>
+                        <div class="col d-md-flex justify-content-md-end" id="dash_search">
+                            <form class="form-inline">
+                                <div class="input-group input-group-sm" style="width: 100%;"><input class="form-control" type="text" style="background: #000000;border-radius: 5px 0px 0px 5px;border: 0;" inputmode="url" placeholder="Enter URL">
+                                    <div class="input-group-append" id="srch_btn-1"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-md-8" id="tab-col">
-                            <h2 class="text-truncate text-center" style="border-bottom: 1px solid white;font-size: 30px;padding: 6px;font-family: 'Open Sans';margin: 0;background-color: #1b2636;">Reply Reaction</h2>
-                            <div id="db_tabs">
-                                <ul class="nav nav-tabs nav-fill" role="tablist">
-                                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">LSTM</a></li>
-                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">Naiive Bayes</a></li>
-                                    <li class="nav-item" role="presentation"><a class="nav-link text-break" role="tab" data-toggle="tab" href="#tab-3">Random Forest</a></li>
-                                </ul>
-                                <div class="tab-content" style="/*height: 222px;*/">
-                                    <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
-                                        <div class="row">
-                                            <div class="col-md-6 reaction_chart"><img class="img-fluid" src="assets/img/graph.png">
-                                                <p><span>24%</span><br>Positive</p>
-                                            </div>
-                                            <div class="col-md-6 reaction_chart"><img class="img-fluid" src="assets/img/graph.png">
-                                                <p><span>24%</span><br>negative</p>
+                    <div id="dashboard">
+                        <div class="row" id="dash_intro">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center align-items-sm-center align-items-lg-center" id="tweet_date"><i class="fa fa-calendar d-sm-flex"></i>
+                                    <h4>Tweeted on:&nbsp;<span id="date">2020-12-17</span></h4>
+                                </div>
+                                <div id="tweet_rep_num">
+                                    <h3 style="margin: 10px 0 0 0;">Replies</h3>
+                                    <h2 id="number" style="margin: 0;">345</h2>
+                                </div>
+                                <div id="tweet">
+                                    <p>One advanced diverted domestic repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had sAD olicitude favourable own. Which could&nbsp;saw guest man now heard
+                                        but. Lasted Possible procured her trifling&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-8" id="tab-col">
+                                <h2 class="text-truncate text-center" style="border-bottom: 1px solid white;font-size: 30px;padding: 6px;font-family: 'Open Sans';margin: 0;background-color: #1b2636;">Reply Reaction</h2>
+                                <div id="db_tabs">
+                                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                                        <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">LSTM</a></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2">Naiive Bayes</a></li>
+                                        <li class="nav-item" role="presentation"><a class="nav-link text-break" role="tab" data-toggle="tab" href="#tab-3">Random Forest</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
+                                            <div class="row">
+                                                <div class="col-md-6 reaction_chart"><img class="img-fluid" src="{{ url_for('static', filename='img/graph.png') }}">
+                                                    <p><span>24%</span><br>Positive</p>
+                                                </div>
+                                                <div class="col-md-6 reaction_chart"><img class="img-fluid" src="{{ url_for('static', filename='img/graph.png') }}">
+                                                    <p><span>24%</span><br>negative</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="tab-pane fade" role="tabpanel" id="tab-2">
-                                        <div class="row">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6"></div>
+                                        <div class="tab-pane fade" role="tabpanel" id="tab-2">
+                                            <div class="row">
+                                                <div class="col-md-6"></div>
+                                                <div class="col-md-6"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="tab-pane fade" role="tabpanel" id="tab-3">
-                                        <div class="row">
-                                            <div class="col-md-6"></div>
-                                            <div class="col-md-6"></div>
+                                        <div class="tab-pane fade" role="tabpanel" id="tab-3">
+                                            <div class="row">
+                                                <div class="col-md-6"></div>
+                                                <div class="col-md-6"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-4 d-flex" id="accuracy">
-                            <div style="/*height: 267px;*/">
-                                <h2 class="text-truncate text-center" style="border-bottom: 1px solid white;font-size: 30px;padding: 6px;font-family: 'Open Sans';margin: 0;">Accuracy</h2>
-                                <div class="d-xl-flex align-content-center align-items-xl-center" style="height: 100%;"><img class="img-fluid" src="assets/img/graph.png"></div>
+                            <div class="col-12 col-md-4 d-flex" id="accuracy">
+                                <div>
+                                    <h2 class="text-truncate text-center" style="border-bottom: 1px solid white;font-size: 30px;padding: 6px;font-family: 'Open Sans';margin: 0;">Accuracy</h2>
+                                    <div class="d-xl-flex align-content-center align-items-xl-center" style="height: 100%;"><img class="img-fluid" src="{{ url_for('static', filename='img/graph.png') }}"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+{% endblock %}
